@@ -1,0 +1,22 @@
+*{
+    background-color: #007bff;;
+}
+
+.buton{
+    position: absolute;
+    top: 50px;
+    left: 35px;
+    cursor: pointer;
+}
+
+.buton nav{
+    display: block;
+    width: 30px;
+    height: 0.3rem;
+    margin: 0.3rem 0;
+    background-color: #e91e63;
+    border-radius: 5px;
+}
+.header_contenair{
+    display: inline;
+}
