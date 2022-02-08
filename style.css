@@ -1,7 +1,82 @@
-*{
-    background-color: #007bff;;
+* {
+  background-color: #007bff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ****************************** HEADER************************************ */
+.header_contenair{
+    display: flex;
+    /* border: 1px solid red; */
+    margin-top: 10px;
+}
+
+.logo {
+  margin: 10px;
+  margin-right: 210px;
+}
+
+/* icon */
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height:10px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    margin-top:40px ;
+    /* border: 3px solid #fff; */
+  }
+  
+  /* LES CONTENUES DANS LA BOITE */
+  
+  .menu-btn_burger {
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 45, 0.2);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu-btn_burger::before,
+  .menu-btn_burger::after{
+    content: '';
+    position:absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .3s ease-in-out;
+  }
+  .menu-btn_burger::before{
+    transform: translateY(-16px);
+  }
+  
+  .menu-btn_burger::after{
+    transform: translateY(16px);
+  }
+  /* ANIMATION */
+  .menu-btn.open .menu-btn_burger{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+  }
+  .menu-btn.open .menu-btn_burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+  .menu-btn.open .menu-btn_burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+  
+
+/* ****************************** NAV ****************************** */
+
+/* 
 .buton{
     position: absolute;
     top: 50px;
@@ -19,4 +94,4 @@
 }
 .header_contenair{
     display: inline;
-}
+} */
