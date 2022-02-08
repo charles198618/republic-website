@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://cdpn.io/genevievecm/fullembedgrid/gXxYpY?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Blended text layers</title>
+  
+  
+  <link rel="stylesheet" href="./css(1)">
+  
+<style>
+html, body {
+  background-color: #efefef;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#text {
+  font-family: "Fredoka One", sans-serif;
+  font-size: 6em;
+  line-height: 1em;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#text:hover {
+  cursor: default;
+}
+#text .wrapper {
+  display: inline-block;
+  top: -900px;
+  position: relative;
+  height: 150px;
+  /* default */
+  width: 90px;
+  /* default */
+  transition: ease 0.3s all;
+}
+#text .wrapper span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: ease 0.3s all;
+}
+#text .wrapper span.letter-2 {
+  color: rgba(0, 0, 255, 0.5);
+}
+#text .wrapper span.letter-1 {
+  color: rgba(255, 0, 0, 0.5);
+  z-index: 1;
+}
+#text .wrapper span.letter-1:hover {
+  top: -3px;
+  right: -3px;
+}
+#text .wrapper span.letter-1:hover ~ .letter-2 {
+  top: 3px;
+  right: 3px;
+}
+#text .wrapper span.space {
+  padding: 0;
+  min-width: 30px;
+  display: inline-block;
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <div id="text"><div class="wrapper" style="width: 53px; height: 96px; top: 0px;"><span class="letter-1">h</span><span class="letter-2">h</span></div><div class="wrapper" style="width: 53px; height: 96px; top: 0px;"><span class="letter-1">o</span><span class="letter-2">o</span></div><div class="wrapper" style="width: 48px; height: 96px; top: 0px;"><span class="letter-1">v</span><span class="letter-2">v</span></div><div class="wrapper" style="width: 53px; height: 96px; top: 0px;"><span class="letter-1">e</span><span class="letter-2">e</span></div><div class="wrapper" style="width: 32px; height: 96px; top: 0px;"><span class="letter-1">r</span><span class="letter-2">r</span></div><div class="wrapper" style="width: 30px; height: 0px; top: 0px;"><span class="space"></span><span class="space"></span></div><div class="wrapper" style="width: 80px; height: 96px; top: 0px;"><span class="letter-1">m</span><span class="letter-2">m</span></div><div class="wrapper" style="width: 53px; height: 96px; top: 0px;"><span class="letter-1">e</span><span class="letter-2">e</span></div></div>
+    <script src="./stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  
+      <script id="rendered-js">
+// type anything here
+const text = 'hover me';
+
+// this function turns a string into an array
+const createLetterArray = string => {
+  return string.split('');
+};
+
+// this function creates letter layers wrapped in span tags
+const createLetterLayers = array => {
+  return array.map(letter => {
+    let layer = '';
+    //specify # of layers per letter
+    for (let i = 1; i <= 2; i++) {if (window.CP.shouldStopExecution(0)) break;
+      // if letter is a space
+      if (letter == ' ') {
+        layer += '<span class="space"></span>';
+      } else {
+        layer += '<span class="letter-' + i + '">' + letter + '</span>';
+      }
+    }window.CP.exitedLoop(0);
+    return layer;
+  });
+};
+
+// this function wraps each letter in a parent container
+const createLetterContainers = array => {
+  return array.map(item => {
+    let container = '';
+    container += '<div class="wrapper">' + item + '</div>';
+    return container;
+  });
+};
+
+// use a promise to output text layers into DOM first
+const outputLayers = new Promise(function (resolve, reject) {
+  document.getElementById('text').innerHTML = createLetterContainers(createLetterLayers(createLetterArray(text))).join('');
+  resolve();
+});
+
+// then adjust width and height of each letter
+const spans = Array.prototype.slice.call(document.getElementsByTagName('span'));
+outputLayers.then(() => {
+  return spans.map(span => {
+    setTimeout(() => {
+      span.parentElement.style.width = span.offsetWidth + 'px';
+      span.parentElement.style.height = span.offsetHeight + 'px';
+    }, 250);
+  });
+}).then(() => {
+  // then slide letters into view one at a time
+  let time = 250;
+  return spans.map(span => {
+    time += 75;
+    setTimeout(() => {
+      span.parentElement.style.top = '0px';
+    }, time);
+  });
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="./iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+
+
+
+ 
+</body></html>

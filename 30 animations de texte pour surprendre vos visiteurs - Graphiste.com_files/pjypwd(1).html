@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://cdpn.io/ARS/fullembedgrid/pjypwd?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+
+
+  <title>CodePen - Shattering Text Animation</title>
+  
+  <link rel="stylesheet" href="./reset.min.css">
+
+  
+  
+<style>
+body {
+  background: #FED75A;
+  overflow: hidden;
+}
+
+figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+svg {
+  padding: 5vw;
+  width: 90vw;
+}
+
+svg > * {
+  fill: #1C1C1C;
+  stroke: #1C1C1C;
+  stroke-width: 0.85px;
+}
+
+/* hover tip */
+body:hover:after {
+  content: "Hover to Slow Motion";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1vh;
+  color: #1C1C1C;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font: 700 9px/14px Tahoma, sans-serif;
+  -moz-animation: tip 2.5s forwards;
+  -webkit-animation: tip 2.5s forwards;
+  animation: tip 2.5s forwards;
+}
+
+@-moz-keyframes tip {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 80% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes tip {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 80% {
+    opacity: 1;
+  }
+}
+@keyframes tip {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 80% {
+    opacity: 1;
+  }
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no">
+  <figure>
+<svg x="0px" y="0px" viewBox="0 0 883 105.2" xml:space="preserve" overflow="visible">
+<polygon points="359.9,49.6 359.8,49.7 359.9,49.8 " data-svg-origin="359.79998779296875 49.599998474121094" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="28,0 10.8,0 28,9 " data-svg-origin="10.800000190734863 0" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="28,12.6 0,46 0,51.9 28,48.9 " data-svg-origin="0 12.600000381469727" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="0.8,105 28,105 28,74.7 20.3,69.7 " data-svg-origin="0.800000011920929 69.69999694824219" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="28,9 10.8,0 0,0 0,46 28,12.6 " data-svg-origin="0 0" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="0,51.9 0,57.3 20,69.8 20,69.8 20,69.8 28,74.7 28,48.9 " data-svg-origin="0 48.900001525878906" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="0,57.3 0,105 0.8,105 20.1,69.7 " data-svg-origin="0 57.29999923706055" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="89.7,40.6 61,25.9 38,46 38,47.8 91,41.9 " data-svg-origin="38 25.899999618530273" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="89.7,40.6 68.4,19.4 61,25.9 " data-svg-origin="61 19.399999618530273" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="99,41 126,37.9 126,30.3 99,0 99,0 " data-svg-origin="99 0" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="38,47.8 38,48.9 103.1,63.5 98.9,49.8 91,41.9 " data-svg-origin="38 41.900001525878906" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="68.4,19.3 49.2,0 38,0 38,14.1 61,25.8 " data-svg-origin="38 0" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="38,48.9 38,80.9 66,98.3 66,55.5 115.2,105 115.8,105 103.1,63.4 " data-svg-origin="38 48.900001525878906" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="61,25.9 38,14.1 38,46 " data-svg-origin="38 14.100000381469727" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="38,105 66,105 66,98.3 38,80.9 " data-svg-origin="38 80.9000015258789" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="126,0 99,0 126,30.3 " data-svg-origin="99 0" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="99,49.8 102.9,63.5 126,68.7 126,59.4 99,45.3 " data-svg-origin="99 45.29999923706055" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="99,41 99,45.3 126,59.4 126,37.9 " data-svg-origin="99 37.900001525878906" transform="matrix(1,0,0,1,0,0)" style="opacity: 1;"></polygon>
+<polygon points="115.8,105 126,105 126,68.7 102.8,63.4 " data-svg-origin="102.80000305175781 63.400001525878906" transform="matrix(0.99999,0,0,0.99999,0,0)" style="opacity: 1;"></polygon>
+<path d="M225.8,74.2l-12.6,24.5c7.5,4.1,16.1,6.5,25.3,6.5c2.2,0,4.3-0.1,6.4-0.4L237,77.7C233,77.5,229.1,76.2,225.8,74.2z" data-svg-origin="213.1999969482422 74.19999694824219" transform="matrix(0.99999,0,0,0.99999,0.00006124928796680251,-0.00024634496632813807)" style="opacity: 1;"></path>
+<path d="M213.8,55.7l-20.8,23c4.8,8.4,11.8,15.4,20.3,20.1l12.6-24.5C219.3,70.3,214.7,63.5,213.8,55.7z" data-svg-origin="193 55.70000076293945" transform="matrix(0.99999,-0.00001,0.00001,0.99999,-0.0010038919868406992,0.003732055030120307)" style="opacity: 0.999998;"></path>
+<path d="M238.5,77.8c-0.5,0-1,0-1.4,0l7.8,27.1c8.7-1,16.7-4.2,23.6-8.9l-14.6-23.3C249.5,75.8,244.3,77.8,238.5,77.8z" data-svg-origin="237.10000610351562 72.69999694824219" transform="matrix(0.99998,0.00012,-0.00012,0.99998,0.006462556182015078,-0.02454820417997894)" style="opacity: 0.999989;"></path>
+<path d="M251.5,31.3c6.7,4.1,11.3,11.2,11.9,19.4l27.5,1.5c-0.1-12.4-4.6-23.9-12-32.8L251.5,31.3z" data-svg-origin="251.5 19.39999771118164" transform="matrix(0.99996,0.00031,-0.00031,0.99996,0.02970114802431567,-0.08643303442807238)" style="opacity: 0.999963;"></path>
+<path d="M263.6,52.7c0,8-3.8,15.2-9.8,19.8l14.6,23.3c13.6-9.4,22.6-25.2,22.6-43c0-0.2,0-0.4,0-0.6l-27.5-1.5
+	C263.5,51.4,263.6,52,263.6,52.7z" data-svg-origin="253.8000030517578 50.70000457763672" transform="matrix(0.99989,0.0003,-0.0003,0.99989,0.0814024628131449,-0.05615665943872017)" style="opacity: 0.999898;"></path>
+<path d="M227.3,30.3L212.7,7.1c-8.5,4.9-15.6,12.1-20.3,20.8L218.3,38C220.6,34.8,223.7,32.1,227.3,30.3z" data-svg-origin="192.39999389648438 7.099999904632568" transform="matrix(0.99976,0.00008,-0.00008,0.99976,-0.018411971853794284,-0.0861124145015566)" style="opacity: 0.999765;"></path>
+<path d="M213.6,52.7c0-5.5,1.8-10.6,4.7-14.7l-25.9-10.2c-4,7.5-6.3,16-6.3,25c0,9.4,2.5,18.2,6.8,25.8l20.8-23
+	C213.6,54.7,213.6,53.7,213.6,52.7z" data-svg-origin="186.10000610351562 27.799999237060547" transform="matrix(0.99951,-0.00285,0.00285,0.99951,0.12632872251327854,0.40410771331376694)" style="opacity: 0.999518;"></path>
+<path d="M238.5,27.7c3.6,0,7,0.8,10.1,2.1l12.5-24.4c-6.8-3.3-14.5-5.1-22.6-5.1c-9.4,0-18.2,2.5-25.8,6.8l14.6,23.3
+	C230.7,28.6,234.5,27.7,238.5,27.7z" data-svg-origin="212.6999969482422 0.3000016212463379" transform="matrix(0.99909,-0.00087,0.00087,0.99909,-0.06902028322210185,0.4949215206783624)" style="opacity: 0.999098;"></path>
+<path d="M251.5,31.3L279,19.4c-4.9-5.9-11-10.7-17.9-14.1l-12.5,24.4C249.6,30.2,250.6,30.7,251.5,31.3z" data-svg-origin="248.60000610351562 5.299999237060547" transform="matrix(0.99833,-0.0137,0.0137,0.99833,0.3237280983779556,3.142570307774173)" style="opacity: 0.998425;"></path>
+<polygon points="387,105 360,50 360,89.1 376.1,105 " data-svg-origin="360 50" transform="matrix(0.99721,0.01937,-0.01937,0.99721,1.0815933648525515,-7.34624429224457)" style="opacity: 0.997399;"></polygon>
+<polygon points="387,29.5 360.8,0 360,0 360,49.6 387,30.8 " data-svg-origin="360 0" transform="matrix(0.99532,-0.0337,0.0337,0.99532,1.1870067221123577,10.47587602314896)" style="opacity: 0.995897;"></polygon>
+<polygon points="387,0 360.8,0 387,29.5 " data-svg-origin="360.79998779296875 0" transform="matrix(0.99309,-0.03662,0.03662,0.99309,-0.42133337462678355,12.190909859463849)" style="opacity: 0.993771;"></polygon>
+<polygon points="359.9,49.8 359.8,49.7 336.6,65.6 360,89.1 360,50 " data-svg-origin="336.6000061035156 49.70000076293945" transform="matrix(0.99051,-0.02527,0.02527,0.99051,-1.0601781271909658,6.989695628675037)" style="opacity: 0.990842;"></polygon>
+<polygon points="336.1,26 335.6,26.1 330.8,59.8 335.6,26.1 308.8,27.1 335.6,26.1 335.6,25.5 310.2,0 299,0 299,8.2 327,61.4 
+	327,55.5 336.8,65.6 359.9,49.7 " data-svg-origin="299 0" transform="matrix(0.98488,-0.06307,0.06307,0.98488,10.645308993273886,16.450552336607277)" style="opacity: 0.986902;"></polygon>
+<polygon points="360,50 360,50 360,50 387,105 387,105 387,30.8 360,49.6 360,49.8 " data-svg-origin="360 30.799999237060547" transform="matrix(0.98009,0.05622,-0.05622,0.98009,0.9451069889295809,-23.902385528672603)" style="opacity: 0.98171;"></polygon>
+<polygon points="299,105 326.1,105 310.9,78.9 326.1,105 327,105 327,69.5 299,86.5 " data-svg-origin="299 69.5" transform="matrix(0.94601,-0.23589,0.23589,0.94601,1.8209164130456372,63.83474015957155)" style="opacity: 0.974988;"></polygon>
+<polygon points="299,52.7 299,86.5 327,69.5 327,65.1 299,36.4 " data-svg-origin="299 36.400001525878906" transform="matrix(0.8944,-0.36607,0.36607,0.8944,23.362399736758846,114.74499584352277)" style="opacity: 0.966421;"></polygon>
+<polygon points="336.1,26 335.6,25.6 335.6,26.1 " data-svg-origin="335.6000061035156 25.600000381469727" transform="matrix(0.92506,-0.23985,0.23985,0.92506,-1.1013105851230875,74.75467283262637)" style="opacity: 0.955652;"></polygon>
+<polygon points="299,8.2 299,36.4 327,65.1 327,61.4 " data-svg-origin="299 8.199999809265137" transform="matrix(0.91025,0.24358,-0.24358,0.91025,41.29384043045022,-46.037764629354854)" style="opacity: 0.942282;"></polygon>
+<polygon points="425,36 425,27.8 399.8,0 397,0 397,49.5 397,49.5 " data-svg-origin="397 0" transform="matrix(0.87701,-0.29676,0.29676,0.87701,21.548238189286735,100.42663062480818)" style="opacity: 0.925867;"></polygon>
+<polygon points="425,76 397,76 397,105.2 425,80.3 " data-svg-origin="397 76" transform="matrix(0.35883,-0.83181,0.83181,0.35883,197.50549586223212,412.7585921272385)" style="opacity: 0.905912;"></polygon>
+<polygon points="432.5,63 438.1,40 425,40 425,36 397.4,49.5 425,66.1 425,63 " data-svg-origin="397.3999938964844 36" transform="matrix(0.87124,0.13648,-0.13648,0.87124,100.41494621876842,-75.98881558621648)" style="opacity: 0.881874;"></polygon>
+<polygon points="425,66.1 397,49.5 397,49.5 397,76 425,76 " data-svg-origin="397 49.5" transform="matrix(0.54853,0.65344,-0.65344,0.54853,270.98927980825914,-184.6674127044679)" style="opacity: 0.853157;"></polygon>
+<polygon points="425,23 444.3,23 437.3,0 399.8,0 425,27.8 " data-svg-origin="399.79998779296875 0" transform="matrix(0.53223,0.62262,-0.62262,0.53223,162.37143194712596,-193.60753164225713)" style="opacity: 0.819107;"></polygon>
+<polygon points="397.4,49.5 397.4,49.5 397.4,49.5 " data-svg-origin="397.3999938964844 49.5" transform="matrix(-0.43595,0.6456,-0.6456,-0.43595,646.3645698163363,-98.62285656980788)" style="opacity: 0.779016;"></polygon>
+<polygon points="432.5,63 456.7,63 449.5,40 438.1,40 " data-svg-origin="432.5 40" transform="matrix(0.51868,0.51667,-0.51667,0.51868,269.0578547002148,-81.63637013695242)" style="opacity: 0.732112;"></polygon>
+<polygon points="463,23 463,0 437.3,0 444.3,23 " data-svg-origin="437.29998779296875 0" transform="matrix(0.53687,0.41334,-0.41334,0.53687,242.97057912367842,-189.92785626244944)" style="opacity: 0.677561;"></polygon>
+<polygon points="458,63 458,40 449.5,40 456.7,63 " data-svg-origin="449.5 40" transform="matrix(-0.39468,-0.47094,0.47094,-0.39468,790.2648986369873,227.89068015483164)" style="opacity: 0.614465;"></polygon>
+<polygon points="463,83 425,83 425,80.3 397.4,105 462,105 420.9,83.8 462,105 463,105 " data-svg-origin="397.3999938964844 80.30000305175781" transform="matrix(-0.39127,-0.37485,0.37485,-0.39127,679.3025925116292,380.1505785063568)" style="opacity: 0.541857;"></polygon>
+<path d="M591.6,68.8c8.7-7.1,14.3-17.9,14.3-29.9c0-4.8-0.9-9.3-2.5-13.5l-20.6,13.3L591.6,68.8z" data-svg-origin="582.7999877929688 25.400001525878906" transform="matrix(-0.01844,0.46089,-0.46089,-0.01844,594.824149771089,-285.5778596524821)" style="opacity: 0.46126;"></path>
+<path d="M582.8,38.6L582.8,38.6C582.7,38.6,582.7,38.6,582.8,38.6L582.8,38.6z" data-svg-origin="582.7249755859375 38.599998474121094" transform="matrix(0.24253,-0.30317,0.30317,0.24253,694.9590496526931,380.0438271039777)" style="opacity: 0.38825;"></path>
+<path d="M567.8,77c0.5,0,1.1,0.4,1.6,0.4L564.8,54h-8.7l-13.9,21l8.8,11.1V77H567.8z" data-svg-origin="542.199951171875 54" transform="matrix(-0.11573,0.30347,-0.30347,-0.11573,637.2248075710527,-228.15125929591449)" style="opacity: 0.324792;"></path>
+<path d="M556.1,54H551V23h16.6c2.6,0,5.1,0.9,7.3,2.1l12.8-19.2C581.7,2.2,574.7,0,567.2,0h-33.8l27.2,16.7l27-10.7l-27,10.8l0,0
+	l0,0l-37.7,15v17.9L542,75L556.1,54z" data-svg-origin="522.9000244140625 0" transform="matrix(-0.26203,-0.06475,0.06475,-0.26203,596.4832216489372,68.87739843128958)" style="opacity: 0.269918;"></path>
+<path d="M582.7,38.9c0,8.4-6.7,15.1-15.1,15.1h-2.9l4.6,23.5c8.4-0.4,16.1-3.6,22.2-8.6L582.7,38.9L582.7,38.9z" data-svg-origin="564.7000122070312 38.900001525878906" transform="matrix(0.17397,0.13905,-0.13905,0.17397,795.3888812642936,13.848376899014738)" style="opacity: 0.222724;"></path>
+<polygon points="523,103.4 523,105 551,105 551,86.1 542.2,74.8 " data-svg-origin="523 74.80000305175781" transform="matrix(-0.08043,0.16367,-0.16367,-0.08043,744.5782008113995,204.08088384186755)" style="opacity: 0.182375;"></polygon>
+<polygon points="523,49.7 523,103.4 542,74.8 " data-svg-origin="523 49.70000076293945" transform="matrix(0.04729,-0.14034,0.14034,0.04729,714.6375300826461,-100.9901813804978)" style="opacity: 0.148098;"></polygon>
+<polygon points="533.4,0 523,0 523,31.8 560.7,16.7 " data-svg-origin="523 0" transform="matrix(-0.03184,-0.11484,0.11484,-0.03184,238.43373446708256,152.82219394540988)" style="opacity: 0.119181;"></polygon>
+<path d="M582.7,38.6L582.7,38.6l20.6-13.2c-3-8-8.6-14.8-15.8-19.2l-12.8,19.2C579.6,27.8,582.7,32.8,582.7,38.6z" data-svg-origin="574.7000122070312 6.1999969482421875" transform="matrix(-0.06243,-0.07156,0.07156,-0.06243,1014.9870075448084,-240.51210877470723)" style="opacity: 0.0949675;"></path>
+<polygon points="609,65.6 609,105 615.3,105 628.8,75.8 615.3,105 637,105 637,96.9 619.9,53.5 " data-svg-origin="609 53.5" transform="matrix(-0.06978,0.02709,-0.02709,-0.06978,694.4082145466525,253.50307089229932)" style="opacity: 0.0748601;"></polygon>
+<polygon points="620.1,53.5 637,96.9 637,59.8 637,34.4 " data-svg-origin="620.0999755859375 34.400001525878906" transform="matrix(0.01899,0.05513,-0.05513,0.01899,711.9962113437132,203.0174443090305)" style="opacity: 0.0583127;"></polygon>
+<polygon points="637,0 617.8,0 637,21.8 " data-svg-origin="617.7999877929688 0" transform="matrix(-0.01695,-0.04149,0.04149,-0.01695,329.21268374525795,-437.56066156074235)" style="opacity: 0.04483;"></polygon>
+<polygon points="637,34.4 637,21.8 617.8,0 609,0 609,25.8 619.9,53.5 " data-svg-origin="609 0" transform="matrix(-0.03176,-0.01203,0.01203,-0.03176,807.7005614078439,206.59031890240038)" style="opacity: 0.0339652;"></polygon>
+<polygon points="609,25.8 609,65.6 619.7,53.5 " data-svg-origin="609 25.799999237060547" transform="matrix(-0.0087,-0.02377,0.02377,-0.0087,372.6088125325802,-294.91125029851486)" style="opacity: 0.0253171;"></polygon>
+<polygon points="686.5,83 674,83 674,63 695.6,63 690.1,40 683.5,40 664.3,83.1 677,105 681.6,105 " data-svg-origin="664.2999877929688 40" transform="matrix(-0.0131,-0.01309,0.01309,-0.0131,1076.0068700616775,523.7675845045197)" style="opacity: 0.0185277;"></polygon>
+<polygon points="647,53.2 647,105 654.5,105 664.4,83.2 " data-svg-origin="647 53.20000076293945" transform="matrix(0.00069,0.01326,-0.01326,0.00069,771.4081693193912,-263.2949513193217)" style="opacity: 0.01328;"></polygon>
+<polygon points="683.5,40 674,40 674,34.9 646.6,53 646.8,53 664.3,83.1 " data-svg-origin="646.5999755859375 34.900001525878906" transform="matrix(-0.00077,-0.00926,0.00926,-0.00077,490.93612254799393,-201.85293066667288)" style="opacity: 0.00929495;"></polygon>
+<polygon points="712,23 712,0 701.3,0 691.2,23 " data-svg-origin="691.2000122070312 0" transform="matrix(0.00106,0.00623,-0.00623,0.00106,564.2299231770951,309.6076931835545)" style="opacity: 0.00632973;"></polygon>
+<polygon points="654.5,105 677,105 664.3,83.1 " data-svg-origin="654.5 83.0999984741211" transform="matrix(-0.00372,0.00188,-0.00188,-0.00372,470.0800113752366,421.73769510185457)" style="opacity: 0.00417471;"></polygon>
+<polygon points="674,23 675.1,23 652.4,0 647,0 647,53.2 674,34.9 " data-svg-origin="647 0" transform="matrix(-0.00178,0.00196,-0.00196,-0.00178,1026.3012671080724,290.1493394051214)" style="opacity: 0.0026512;"></polygon>
+<polygon points="686.1,23 680.7,0 652.4,0 675.1,23 " data-svg-origin="652.4000244140625 0" transform="matrix(-0.00099,0.00126,-0.00126,-0.00099,169.9901471233385,321.7241201979706)" style="opacity: 0.00160897;"></polygon>
+<polygon points="712,105 712,83 700.1,83 705.4,105 " data-svg-origin="700.0999755859375 83" transform="matrix(-0.00029,0.00087,-0.00087,-0.00029,758.6783834042776,572.6568791135205)" style="opacity: 0.000923765;"></polygon>
+<polygon points="708,63 708,40 690.1,40 695.6,63 " data-svg-origin="690.0999755859375 40" transform="matrix(0.0001,0.00048,-0.00048,0.0001,500.84717371045195,-389.1094112839624)" style="opacity: 0.000494826;"></polygon>
+<polygon points="681.6,105 705.4,105 700.1,83 686.5,83 " data-svg-origin="681.5999755859375 83" transform="matrix(-0.00022,-0.00007,0.00007,-0.00022,367.00185081521687,-409.14235937346905)" style="opacity: 0.000242439;"></polygon>
+<polygon points="691.2,23 701.3,0 680.7,0 686.1,23 " data-svg-origin="680.7000122070312 0" transform="matrix(0.0001,0.00001,-0.00001,0.0001,345.53015200536254,-91.4567850869755)" style="opacity: 0.000105453;"></polygon>
+<path d="M770.6,77.4c-8,0-14.8-3.3-19.2-8.6l-2.6,31.8c6.4,2.9,13.4,4.6,20.8,4.7l17.5-33.8C783,75.2,777.2,77.4,770.6,77.4z" data-svg-origin="748.7999877929688 68.80000305175781" transform="matrix(0.00002,-0.00002,0.00002,0.00002,360.4838627831782,-329.4446621281397)" style="opacity: 3.882e-05;"></path>
+<path d="M746,53.7l-26.2,12.4c4,15.3,14.8,27.9,29,34.4l2.6-31.8C748.2,64.7,746.2,59.6,746,53.7z" data-svg-origin="719.7999877929688 53.70000076293945" transform="matrix(0,0,0,0,525.8609923485818,-365.62496550724364)" style="opacity: 1.11193e-05;"></path>
+<path d="M787.2,71.4l-17.5,33.8c0.3,0,0.6,0,0.9,0c14.6,0,27.7-6,37.2-15.5l-19.6-19.3C787.9,70.7,787.6,71,787.2,71.4z" data-svg-origin="769.7000122070312 70.39999389648438" transform="matrix(0,0,0,0,857.2719515338879,-388.54205258967)" style="opacity: 2.09106e-06;"></path>
+<path d="M770.6,28.1c7.1,0,13.3,2.5,17.6,6.9l0,0L777.7,0.7c-2.3-0.3-4.7-0.5-7.1-0.5c-4.8,0-9.4,0.6-13.7,1.8l-2.6,31.8
+	C758.5,30.2,764.2,28.1,770.6,28.1z" data-svg-origin="754.300048828125 0.19999998807907104" transform="matrix(0,0,0,0,860.7868433427802,89.56650873797041)" style="opacity: 0;"></path>
+<path d="M807.6,15.5c-7.9-7.9-18.3-13.2-29.9-14.8l10.6,34.2L807.6,15.5z" data-svg-origin="777.699951171875 0.6999998092651367" transform="matrix(0,0,0,0,740.9080456287685,-5.4264296470394955)" style="opacity: 0;"></path>
+<path d="M746,52.7c0-7.4,2.8-13.8,7.5-18.2l-30.3-4.2c-3.2,6.8-5,14.4-5,22.4c0,4.6,0.6,9.1,1.7,13.4L746,53.7
+	C746,53.3,746,53,746,52.7z" data-svg-origin="718.2000122070312 30.299999237060547" transform="matrix(0,0,0,0,948.9889479037627,335.850020288882)" style="opacity: 0;"></path>
+<path d="M754.3,33.8l2.6-31.8c-14.9,4-27.2,14.5-33.7,28.3l30.3,4.2C753.7,34.3,754,34,754.3,33.8z" data-svg-origin="723.199951171875 2" transform="matrix(0,0,0,0,770.7483364711054,-215.66754724846635)" style="opacity: 0;"></path>
+<polygon points="845,40 845,39 818,39 818,66.2 848.9,40 " data-svg-origin="818 39" transform="matrix(0,0,0,0,1197.8229904616337,483.89884652358705)" style="opacity: 0;"></polygon>
+<polygon points="845,63 859.1,63 850.7,40 848.9,40 818,66.2 818,74.6 845,78.3 " data-svg-origin="818 40" transform="matrix(0,0,0,0,1296.828008663712,-298.36928834527134)" style="opacity: 0;"></polygon>
+<polygon points="845,83 845,78.3 818,74.6 818,105 839.2,105 847.7,83 " data-svg-origin="818 74.5999984741211" transform="matrix(0,0,0,0,1122.2383512047436,461.028302379112)" style="opacity: 0;"></polygon>
+<polygon points="879,63 879,40 850.7,40 859.1,63 " data-svg-origin="850.7000122070312 40" transform="matrix(0,0,0,0,955.9297687544786,498.00593245952246)" style="opacity: 0;"></polygon>
+<polygon points="839.2,105 865.9,105 880.8,83 847.7,83 " data-svg-origin="839.2000122070312 83" transform="matrix(0,0,0,0,1238.2698651044893,50.46886385185962)" style="opacity: 0;"></polygon>
+<polygon points="873.2,23 883,23 883,0 860.4,0 860.4,0 " data-svg-origin="860.4000244140625 0" transform="matrix(0,0,0,0,1275.4536262620118,-50.467258443351)" style="opacity: 0;"></polygon>
+<polygon points="883,105 883,83 880.8,83 865.9,105 " data-svg-origin="865.9000244140625 83" transform="matrix(0,0,0,0,932.8947487639743,127.58505076445249)" style="opacity: 0;"></polygon>
+<polygon points="860.4,0.2 860.4,0.2 860.4,0.2 " data-svg-origin="860.4000244140625 0.20000000298023224" transform="matrix(0,0,0,0,1054.3469542729697,469.9432179763294)" style="opacity: 0;"></polygon>
+<polygon points="845,23 873.2,23 860.6,0.2 818,32.2 818,39 845,39 " data-svg-origin="818 0.20000000298023224" transform="matrix(0,0,0,0,325.79261369927985,-133.55204242915943)" style="opacity: 0;"></polygon>
+<polygon points="860.4,0 818,0 818,32.2 860.4,0 " data-svg-origin="818 0" transform="matrix(0,0,0,0,908.2799287781509,61.5941569222183)" style="opacity: 0;"></polygon>
+</svg>
+</figure>
+    <script src="./stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src="./TweenMax.min.js"></script>
+<script src="./jquery.min.js"></script>
+      <script id="rendered-js">
+var tmax_optionsGlobal = {
+  repeat: -1,
+  repeatDelay: 0.65,
+  yoyo: true };
+
+
+CSSPlugin.useSVGTransformAttr = true;
+
+var tl = new TimelineMax(tmax_optionsGlobal),
+path = 'svg *',
+stagger_val = 0.0125,
+duration = 0.75;
+
+$.each($(path), function (i, el) {
+  tl.set($(this), {
+    x: '+=' + getRandom(-500, 500),
+    y: '+=' + getRandom(-500, 500),
+    rotation: '+=' + getRandom(-720, 720),
+    scale: 0,
+    opacity: 0 });
+
+});
+
+var stagger_opts_to = {
+  x: 0,
+  y: 0,
+  opacity: 1,
+  scale: 1,
+  rotation: 0,
+  ease: Power4.easeInOut };
+
+
+tl.staggerTo(path, duration, stagger_opts_to, stagger_val);
+
+var $svg = $('svg');
+$svg.hover(
+function () {
+  tl.timeScale(0.15);
+},
+function () {
+  tl.timeScale(1);
+});
+
+function getRandom(min, max) {
+  return Math.random() * (max - min) + min;
+}
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="./iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+
+
+
+ 
+</body></html>
