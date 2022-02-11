@@ -1,115 +1,224 @@
+/* FONT */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap'); */
+
+/*********************************** VARIABLE *******************************/
+:root {
+  font-size: 1rem;
+}
+.light-mode {
+  --navbar-color: #f0f0f0;
+  --navbar-gb-color: #007fff;
+}
+
+/*:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}*/
+
+/************************************ RESET ******************************* */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ****************************** HEADER************************************ */
-.header_contenair {
+/* ****************************** NAV ************************************ */
+.navbar {
   display: flex;
-  /* border: 1px solid red; */
-  margin-top: 10px;
-  background-color: #007bff;
+  border: 1px solid red;
+  padding: 0;
+  background-color: #007fff;
+  padding-bottom: 30px;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
-
 .logo {
-  margin: 10px;
-  margin-right: 210px;
+  height: 120px;
+  width: 120px;
+  margin-left: 20px;
+  margin-top: 0;
 }
-
-/* icon */
-.menu-btn {
-  position: relative;
+.links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 10px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  margin-top: 40px;
-  /* border: 3px solid #fff; */
+  margin-left: 55px;
+  font-size: 14px;
+  font-family: "Montserra", sans-serif;
+  font-weight: bold;
+  /* border: 1px solid red; */
+}
+ul {
+  list-style: none;
+  margin-top: 60px;
+}
+.link > a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+.recherche {
+  margin-top: 60px;
+  margin-left: 15px;
 }
 
-/* LES CONTENUES DANS LA BOITE */
-
-.menu-btn_burger {
-  width: 30px;
-  height: 4px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 45, 0.2);
-  transition: all 0.3s ease-in-out;
+/* SUB MENU */
+.links1 {
+  margin-top: 12px;
+  display: none;
+  margin: 10px;
+  /* padding: 30px; */
+  border: 1px solid black;
+}
+.links1 .link1 > a {
+  padding: 40px;
+}
+.link1 > a {
+  /* padding:40px; */
+  text-decoration: none;
+  color: white;
+}
+.link:hover .links1 {
+  display: block;
 }
 
-.menu-btn_burger::before,
-.menu-btn_burger::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 4px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.3s ease-in-out;
-}
-.menu-btn_burger::before {
-  transform: translateY(-16px);
+/***** color on mouseover *******/
+.links .link span1 a {
+  text-decoration: none;
+  color: white;
 }
 
-.menu-btn_burger::after {
-  transform: translateY(16px);
-}
-/* ANIMATION */
-.menu-btn.open .menu-btn_burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-}
-.menu-btn.open .menu-btn_burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn.open .menu-btn_burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
+.links:hover .link span1 > a {
+  color: #f1db28;
+  text-decoration: underline;
+  margin-right: none;
 }
 
-/* ****************************** NAV ****************************** */
-
-nav{
-    text-decoration: none;
-    list-style: none;
-    /* margin-left: 30px; */
-    /* margin-top: 10px; */
-    background-color: #007bff;
-    
-    /* display: none; */
+.burger {
+  display: none;
 }
-nav ul li{
-    list-style: none;
-    padding: 3px;
-    margin-left: 30px;
+.logo1 {
+  display: none;
 }
-nav ul li a{
-    text-decoration: none;
-    
-}
-
-/* 
-.buton{
+/*petit appareil*/
+@media screen and (max-width: 767.98px) {
+  .navbar .links {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 50px;
-    left: 35px;
+    width: 0;
+    /* height:calc(100vh); */
+    height: 60vh;
+    top: 65px;
+    right: 0;
+  }
+  .open-nav .navbar_links{
+    width: 100%;
+  }
+
+  .navbar_link > a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.6rem;
+    transition: all 0.4s ease-in-out;
+  }
+  .navbar_link > a:hover {
+    padding-left: 2rem;
+    letter-spacing: 5px;
+  }
+  .logo {
+    display: none;
+  }
+  .recherche {
+    display: none;
+  }
+  .logo1 {
+    margin-top: 5px;
+    display: block;
+  }
+  .burger {
+    display: block;
+    margin-left: 191px;
+    position: relative;
+    padding: 0;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: transparent;
     cursor: pointer;
+    margin-top: 26px;
+  }
+  .bar {
+    display: block;
+    width: 45px;
+    height: 4px;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.4s ease-in-out;
+  }
+  /* effet de la croix */
+  .open-nav .bar {
+    width: 0;
+    background: transparent;
+  }
+  .bar::before,
+  .bar::after {
+    content: "";
+    width: 45px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: white;
+    border-radius: 3px;
+    transition: all 0.6s ease-in-out;
+  }
+  .bar::before {
+    transform: translateY(-10px);
+  }
+  .open-nav .bar::before {
+    transform: rotate(45deg);
+  }
+  .bar::after {
+    transform: translateY(10px);
+  }
+  .open-nav .bar::after {
+    transform: rotate(-45deg);
+  }
 }
 
-.buton nav{
+/* MEDIA QUERY Grandes appareils */
+@media screen and (max-width: 768px) {
+  .navbar_link > a::after {
     display: block;
-    width: 30px;
-    height: 0.3rem;
-    margin: 0.3rem 0;
-    background-color: #e91e63;
-    border-radius: 5px;
+    content: " ";
+    width: 0;
+    height: 1px;
+    background: var(--navbar-color);
+    transition: width 0.4s;
+  }
 }
-.header_contenair{
-    display: inline;
-} */
