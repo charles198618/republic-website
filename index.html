@@ -1,95 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Republic_website</title>
-</head>
-<body>
-    <nav class="navbar" role="navigation">
-        <div>
-            <ul class="links">
-                <li class="link"><a href="#">ACTUALITES</a>
-                    <ul class="links1">
-                        <li class="link1"><a href="#">A la une</a></li>
-                        <li class="link1"><a href="#">Actualités</a></li>
-                        <li class="link1"><a href="#">Covid-19</a></li>
-                        <li class="link1"><a href="#">Conseil des ministres</a></li>
-                    </ul>
-                </li>
-                <li class="link"><a href="#">PRESIDENCE</a>
-                    <ul class="links1">
-                        <li class="link1"><a href="#">Président</a></li>
-                        <li class="link1"><a href="#">Première dame</a></li>
-                        <li class="link1"><a href="#">Cabinet du Président</a></li>
-                        <li class="link1"><a href="#">Anciens président</a></li>
-                        <li class="link1"><a href="#">Symboles de la République</a></li>
-                        <li class="link1"><a href="#">Textes fondateurs</a></li>
-                    </ul>
-                </li>
-                <li class="link"><a href="#">SERVICES</a></li>
-                <li class="link"><a href="#">UNION AFRICAINE</a>
-                </li>            
-            </ul>
-        </div>
-       <div class="logo">
-           <a href=""><img src="img/Search_32px.png" alt="" width="150"></a>
-       </div>
-       <div class="logo1">
-            <a href=""><img src="img/Search_32px.png" alt="" width="80"></a>
-        </div>
+  </head>
+  <body>
+    <!-- SMALL SCREEN -->
+    <nav class="navbar_mobil dark-mode" role="navigation">
+      <div class="navbar_mobil_logo">
+        <img src="img/Search_32px.png" alt="" width="100" />
+      </div>
+      <ul class="navbar_mobil_links">
+        <li class="navbar_mobil_link"><a href="#">ACTUALITES</a></li>
+        <li class="navbar_mobil_link"><a href="#">PRESIDENCE</a></li>
+        <li class="navbar_mobil_link"><a href="#">SERVICES</a></li>
+        <li class="navbar_mobil_link"><a href="#">UNION AFRICAINE</a></li>
+        <li class="navbar_mobil_link"><a href="#">PROGRAMME</a></li>
+        <li class="navbar_mobil_link"><a href="#">MEDIAS</a></li>
+        <li class="navbar_mobil_link"><a href="#">RESSOURCES</a></li>
+        <li class="navbar_mobil_link"><a href="#">CONTACT</a></li>
+        <li class="navbar_mobil_link"><a href="#">RECHERCHE<img src="img/Recherche.png" alt="" width="25"></a></li>
+      </ul>
 
-       <div>
-           <ul class="links">
-               <li class="link"><a href="#">PROGRAMMES</a>
-                    <ul class="links1">
-                        <li class="link1"><a href="#">Programme présidentiel</a></li>
-                        <li class="link1"><a href="#">Plan National du Numérique « Horizon 2025 »</a></li>
-                        <li class="link1"><a href="#">Programme Présidentiel Accéléré de Lutte Contre la Pauvreté et les Inégalités</a></li>
-                    </ul>
-                    
-                </li>
-               <li class="link"><a href="#">MEDIAS</a>
-                    <ul class="links1">
-                        <li class="link1"><a href="#">Salle de presse</a></li>
-                        <li class="link1"><a href="#">Photos</a></li>
-                        <li class="link1"><a href="#">Videos</a></li>
-                        <li class="link1"><a href="#">Accréditation</a></li>
-                    </ul>
-                </li>
-               <li class="link"><a href="#">RESSOURCES</a>
-                    <ul class="links1">
-                        <li class="link1"><a href="#">Discours</a></li>
-                        <li class="link1"><a href="#">Ordonances</a></li>
-                        <li class="link1"><a href="#">Documents</a></li>
-                    </ul>
-                </li>
-               <li class="link"><a href="#">CONCTACT</a></li>
-           </ul>
-       </div>
-
-       <div class="recherche">
-          <a href=""><img src="img/Recherche.png" alt="" width="24"></a> 
-       </div>
-
-        <button class="burger">
-            <span class="bar"></span>
-        </button>
+      <button class="burger">
+        <span class="bar"></span>
+      </button>
     </nav>
 
-    <!-- SECTION1 -->
+    
+    <!-- ******  BIG SCREEN ************* -->
+
+    <nav class="navbar_ordi dark-mode" role="navigation">
+      <div>
+        <ul class="navbarOrdi_links">
+          <li class="navbarOrdi_link"><a href="#">ACTUALITES</a></li>
+          <li class="navbarOrdi_link"><a href="#">PRESIDENCE</a></li>
+          <li class="navbarOrdi_link"><a href="#">SERVICES</a></li>
+          <li class="navbarOrdi_link"><a href="#">UNION AFRICAINE</a></li>
+        </ul>
+      </div>
+
+      <div><img src="img/Search_32px.png" alt="" width="120" /></div>
+
+      <div>
+        <ul class="navbarOrdi_links1">
+          <li class="navbarOrdi_link1"><a href="#">PROGRAMME</a></li>
+          <li class="navbarOrdi_link1"><a href="#">MEDIAS</a></li>
+          <li class="navbarOrdi_link1"><a href="#">RESSOURCES</a></li>
+          <li class="navbarOrdi_link1"><a href="#">CONTACT</a></li>
+          <li class="navbarOrdi_link1"><a href="#"><img src="img/Recherche.png" alt="" width="25"></a></li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main_containte" role="main">
+      <p>" Le modèle de développement durable
+        que j'ai choisi consacre le primat
+        de l'agriculture sur les mines."</p>
+
+        <p>Discours sur l’état de la Nation, Kinshasa, RDC, 13/12/2019 </p> 
+
+        <p> Félix-Antoine Tshisekedi Tshilombo</p>
+    </main>
+<!-- ********************** SECTION 1 ************* -->
     <section>
-        <div class="container_section">
-            <div>
-                <p>" Le modèle de développement durable
-                    que j'ai choisi consacre le primat
-                    de l'agriculture sur les mines."
-                </p>
-            </div>
+      <div class="container_section">
+        <div class="article">
+          <article>
+            <p>Tweets de ‎@Presidence_RDC</p>
+            <h3>Présidence RDC</h3>
+          </article>
+
+          <div class="article1">
+            <img src="img/Search_32px.png" alt="" width="50">
+          </div>
+
+          <div>
+            
+          </div>
         </div>
+
+        <div class="image">
+          <img src="img/f379a1de5772d3860ba2751c1b64bff1.jpg" alt="" width="800">
+
+          <div class="image1">
+            <div class="image2">
+              <img src="img/lignecouleur.png" alt="" width="50">
+              <a href="">ACTUALITES</a>
+            </div> 
+          </div>
+
+
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- ***********************  SECTION 2 ****************** -->
+    <section>
+      <div id="slad">
+        <div class="diapo">
+          <img src="img/1886e90a891f4671ff0dce7b1cdcab03.jpg" alt="" width="1294">
+          <img src="img/32eme UA Felix Tshisekedi.png" alt="" width="1294">
+          <img src="img/Capture d’écran 2020-03-10 à 12.48.23.png" alt="" width="1294">
+          <img src="img/Pr RDC Site Presidence.jpg" alt="" width="1294">
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- ************************ SECTION 3 ****************** -->
+    <section>
+      <div class="formulaire">
+        <div>
+          <h4>Abonnez-vous à la newsletter de la Présidence</h4>
+        </div>
+       
+        <div class="lien">
+          <a href="#">S'inscrire</a>
+        </div>
+
+        <div>
+          <p>Suivez-nous</p>
+        </div>
+        <div>
+          <a href=""><img src="" alt=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- **************** SECTION 5 ***************** -->
+
+    <section>
+        <center><img src="img/maison_transpararente.jpeg" alt=""></center>
+
+        <div class="section4">
+          <div class="section4_1">
+            <a href="">Actualités</a> <br>
+            <a href="">Programmes</a> <br>
+            <a href="">Presse</a> <br>
+            <a href="">Contact</a> <br>
+            <a href="">Accréditations</a> <br>
+            <a href="">Mentions légales</a>
+          </div>
+
+          <div class="section4_2">
+            <p>Présidence</p> <br>
+            <a href="">Présidence</a> <br>
+            <a href="">Prémière dame</a> <br>
+            <a href="">Cabinet du préseident</a> <br>
+            <a href="">Anciens Président</a> <br>
+            <a href="">Anciens président</a> <br>
+            <a href="">Symboles de la République</a> <br>
+            <a href="">Textes fondateurs</a>
+          </div>
+        </div>  
+    </section>
+     <!-- **********************  FOOTER ******************* -->
+
+     <footer>
+       <div class="footer_container">
+         <ul>
+           <li><a href="">COUR-CONSTITUTIONNELLE.CD</a></li>
+           <li><a href="">PRIMATURE.CD</a></li>
+           <li><a href="">ASSEMBLEE-NATIONALE.CD</a></li>
+           <li><a href="">SENAT.CD</a></li>
+           <li><a href=""> INVESTINDRC.CD</a></li>
+           <li><a href="">VISIT-RDCONGO.COM</a></li>
+         </ul>
+       </div>
+     </footer>
+
+
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

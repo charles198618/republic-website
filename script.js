@@ -1,8 +1,8 @@
 function toggleMenu() {
-    const navbar = document.querySelector('.navbar');
+    const navbar_mobil = document.querySelector('.navbar_mobil');
     const burger = document.querySelector('.burger');
     burger.addEventListener('click', () =>{
-        navbar.classList.toggle('open-nav');
+        navbar_mobil.classList.toggle('open-nav');
     });
 }
 toggleMenu();
