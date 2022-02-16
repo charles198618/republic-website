@@ -1,17 +1,8 @@
-const menuBtn = document.querySelector('.menu-btn');
-let menuOpen = false;
-
-
-// AFFECTATION 
-
-menuBtn.addEventListener('click', () =>{
-    if (!menuOpen) {
-        menuBtn.classList.add('open');
-        menuOpen = true;
-    }else{
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-    }
-});
-
-
+function toggleMenu() {
+    const navbar_mobil = document.querySelector('.navbar_mobil');
+    const burger = document.querySelector('.burger');
+    burger.addEventListener('click', () =>{
+        navbar_mobil.classList.toggle('open-nav');
+    });
+}
+toggleMenu();

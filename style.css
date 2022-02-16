@@ -1,115 +1,369 @@
+/* FONTE */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+/************************   VARIABLES  **************************** */
+:root {
+  font-size: 1rem;
+}
+.light-mode {
+  --navbar-color: #007bff;
+  --navbar-bg-color: #f0f0f0;
+}
+.dark-mode {
+  --navbar-color: #fff;
+  --navbar-bg-color: #007bff;
+}
+
+/**************************   RESET *******************************/
 * {
+  box-sizing: border-box;
+  outline: none;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+ul {
+  list-style: none;
 }
 
-/* ****************************** HEADER************************************ */
-.header_contenair {
+/************************* BASIC STYLE ***************************/
+
+body {
+  font-size: var(--font-size);
+  /* font-family: "Poppins", sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.main_containte {
+  padding: 1rem;
+}
+
+/* *********************** NAV-BAR *******************/
+
+.navbar_mobil {
   display: flex;
-  /* border: 1px solid red; */
-  margin-top: 10px;
-  background-color: #007bff;
-}
-
-.logo {
-  margin: 10px;
-  margin-right: 210px;
-}
-
-/* icon */
-.menu-btn {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 30px;
-  height: 10px;
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-  margin-top: 40px;
-  /* border: 3px solid #fff; */
+  padding: 10px;
+  color: var(--navbar-color);
+  background: var(--navbar-bg-color);
+  height: 65px;
+}
+.navbar_mobil_links {
+  display: flex;
+}
+.navbar_mobil_link {
+  padding: 0 10px;
+}
+.navbar_mobil_link > a {
+  color: var(--navbar-color);
+  text-decoration: none;
+}
+.burger {
+  display: none;
 }
 
-/* LES CONTENUES DANS LA BOITE */
+/*********************  SMALL SCREEN   ***********************************/
 
-.menu-btn_burger {
-  width: 30px;
-  height: 4px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 45, 0.2);
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-btn_burger::before,
-.menu-btn_burger::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 4px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
-  transition: all 0.3s ease-in-out;
-}
-.menu-btn_burger::before {
-  transform: translateY(-16px);
-}
-
-.menu-btn_burger::after {
-  transform: translateY(16px);
-}
-/* ANIMATION */
-.menu-btn.open .menu-btn_burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-}
-.menu-btn.open .menu-btn_burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-.menu-btn.open .menu-btn_burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
-}
-
-/* ****************************** NAV ****************************** */
-
-nav{
-    text-decoration: none;
-    list-style: none;
-    /* margin-left: 30px; */
-    /* margin-top: 10px; */
-    background-color: #007bff;
-    
-    /* display: none; */
-}
-nav ul li{
-    list-style: none;
-    padding: 3px;
-    margin-left: 30px;
-}
-nav ul li a{
-    text-decoration: none;
-    
-}
-
-/* 
-.buton{
+@media screen and (max-width: 767.98px) {
+  .navbar_mobil_links {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 50px;
-    left: 35px;
+    width: 0;
+    height: 73vh;
+    top: 65px;
+    right: 0;
+    background: var(--navbar-bg-color);
+    margin-top: 50px;
+  }
+  .navbar_mobil {
+    height: 20%;
+  }
+  .open-nav .navbar_mobil_links {
+    width: 100%;
+  }
+  .navbar_mobil_link > a {
+    display: block;
+    padding: 2px;
+    font-size: 1.2rem;
+    transition: all 0.4s ease-in-out;
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+  .navbar_mobil_link > a:hover {
+    padding-left: 2rem;
+    letter-spacing: 5px;
+  }
+  /* toglle menu */
+  .burger {
+    display: block;
+    position: relative;
+    padding: 0;
+    width: 90px;
+    height: 45px;
+    border: none;
+    background: transparent;
     cursor: pointer;
+    /* padding-right: 10px; */
+  }
+  .bar {
+    display: block;
+    width: 45px;
+    height: 4px;
+    background: var(--navbar-color);
+    border-radius: 3px;
+    transition: all 0.4s ease-in-out;
+  }
+  /* effet de la croix */
+  .open-nav .bar {
+    width: 0;
+    background: transparent;
+  }
+  .bar::before,
+  .bar::after {
+    content: "";
+    width: 45px;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    background: var(--navbar-color);
+    border-radius: 3px;
+    transition: all 0.6s ease-in-out;
+  }
+  .bar::before {
+    transform: translateY(-10px);
+  }
+  .open-nav .bar::before {
+    transform: rotate(45deg);
+  }
+  .bar::after {
+    transform: translateY(10px);
+  }
+  .open-nav .bar::after {
+    transform: rotate(-45deg);
+  }
+  .main_containte {
+    /* background-image: url(img/6135a220f483e3f04383e13b24b6d7ad.png); */
+    background-image: url(img/Palais_de_la_nation.jpg);
+    font-family: "Great Vibes", Helvetica, Arial, serif;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: rgb(12, 3, 3);
+    text-align: center;
+    padding: 2rem;
+    padding-left: 50px;
+    letter-spacing: 2px;
+    text-decoration: transparent;
+    font-weight: bold;
+  }
+  .navbar_ordi {
+    display: none;
+  }
+
+  .image img {
+    width: 400px;
+  }
+
+  /*    Animations images*/
+  body #slad {
+    height: 50vh;
+    /* border: 2px solid red; */
+    width: 400px;
+  }
+  .diapo img {
+    width: 400px;
+  }
+  #slad {
+    /* border: 2px solid red; */
+    width: 400px;
+    overflow: hidden;
+  }
+  .diapo {
+    display: flex;
+    animation-duration: 10s;
+    animation-name: mesImages;
+    animation-iteration-count: infinite;
+    /* overflow: hidden; */
+  }
+  /* definition des annimations */
+  @keyframes mesImages {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-400px);
+    }
+    50% {
+      transform: translateX(-800px);
+    }
+    75% {
+      transform: translateX(-1200px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 }
 
-.buton nav{
-    display: block;
-    width: 30px;
-    height: 0.3rem;
-    margin: 0.3rem 0;
-    background-color: #e91e63;
-    border-radius: 5px;
+/************************** MEDIA QUERY BIG SCREEN *******************************/
+@media screen and (min-width: 768px) {
+  .navbar_mobil {
+    display: none;
+  }
+
+  /* gauche */
+  .navbar_ordi {
+    display: flex;
+    background: var(--navbar-bg-color);
+    position: fixed;
+    width: 100%;
+  }
+
+  .navbarOrdi_links {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-right: 15px;
+  }
+  .navbarOrdi_link > a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+  }
+
+  /* droite */
+  .navbarOrdi_links1 {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 15px;
+  }
+  .navbarOrdi_link1 > a {
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+  }
+  .main_containte {
+    background-image: url(img/Palais_de_la_nation.jpg);
+    text-align: center;
+    padding-top: 340px;
+    padding-bottom: 290px;
+    background-size: cover;
+    height: 50vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+  }
+
+  /* *******************  SECTION 1 **********************/
+  .container_section {
+    display: flex;
+    margin-top: 50px;
+  }
+  .article {
+    border: 1px solid black;
+    margin-left: 90px;
+    margin-right: 20px;
+    padding: 30px;
+  }
+
+  .image {
+    border: 1px solid black;
+  }
+
+  .image2 {
+    display: flex;
+  }
+
+  /* ******************************  SECTION 2  ************************ */
+  body #slad {
+    height: 100vh;
+    /* border: 2px solid red; */
+  }
+  #slad {
+    /* border: 2px solid red; */
+    width: 1298px;
+    /* overflow: hidden; */
+  }
+  .diapo {
+    display: flex;
+    animation-duration: 10s;
+    animation-name: mesImages;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+  }
+  /*definition des annimations */
+  @keyframes mesImages {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-1298px);
+    }
+    50% {
+      transform: translateX(-2596px);
+    }
+    75% {
+      transform: translateX(-2596px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  /* *************** SECTION 3 *************** */
+  .formulaire {
+    border: 1px solid black;
+    background-image: url(img/Palais_de_la_nation.jpg);
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    background-size: cover;
+  }
+  .section4 {
+    /* border: 1px solid red; */
+    /* text-align: center; */
+    display: flex;
+    padding-bottom: 50px;
+  }
+  .section4_1 {
+    margin-left: 500px;
+    /* border: 1px solid black; */
+    padding: 20px;
+  }
+  .section4_2 {
+    /* border: 1px solid black; */
+    margin-left: 50px;
+    padding: 20px;
+  }
+  .section4_1 a,
+  .section4_2 a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  /* ******************** FOOTER **************** */
+  .footer_container {
+    border: 1px solid blue;
+    padding: 15px;
+    background: #007bff;
+  }
+  .footer_container ul {
+    display: flex;
+    /* list-style: none; */
+  }
+  .footer_container li {
+    list-style: none;
+    margin-left: 40 px;
+  }
+  .footer_container a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: white;
+  }
 }
-.header_contenair{
-    display: inline;
-} */
